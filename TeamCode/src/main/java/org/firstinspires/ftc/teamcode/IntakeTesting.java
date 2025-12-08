@@ -1,9 +1,11 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+
 import org.firstinspires.ftc.teamcode.IntakeMode;
 
-
+@TeleOp(name = "Intake Testing")
 // Testing the intake in the main TeleOp
 public class IntakeTesting extends OpMode {
 
@@ -21,11 +23,9 @@ public class IntakeTesting extends OpMode {
         boolean leftBump = gamepad1.left_bumper; // Read left bumper input
 
         if (leftBump) {
-            intake.setMotorSpeed(0.5); // Run intake at 50% power
-        } else {
-            intake.setMotorSpeed(0); // Stop intake
+            intake.setMotorSpeed(0.8); // Run intake at 50% power
+
         }
-
     }
-
 }
+

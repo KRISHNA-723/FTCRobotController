@@ -29,7 +29,7 @@ public class IntakeMode {
 
         // Set the motors speed to the given speed argument
         leftIntake.setPower(speed);
-        rightIntake.setPower(speed);
+        rightIntake.setPower(-speed);
     }
 
 
