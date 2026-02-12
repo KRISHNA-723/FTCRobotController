@@ -23,7 +23,7 @@ public class IntakeTesting extends OpMode {
         boolean leftBump = gamepad1.left_bumper; // Read left bumper input
 
         if (leftBump) {
-            intake.setMotorSpeed(0.8); // Run intake at 50% power
+            intake.setMotorSpeed(0.5); // Run intake at 50% power
 
         }
     }
