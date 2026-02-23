@@ -49,7 +49,6 @@ public class CompetitionAuto extends LinearOpMode {
         leftMotor.setPower(0);
         rightMotor.setPower(0);
 
-        sleep(1000);
 
     }
 }

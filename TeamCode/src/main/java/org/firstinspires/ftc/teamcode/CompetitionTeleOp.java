@@ -56,7 +56,7 @@ public class CompetitionTeleOp extends LinearOpMode {
             // INTAKE (left bumper hold)
             // =========================
             if (gamepad1.left_bumper) {
-                intake.setMotorSpeed(0.5);
+                intake.setMotorSpeed(1.0);
             } else {
                 intake.setMotorSpeed(0);
             }
