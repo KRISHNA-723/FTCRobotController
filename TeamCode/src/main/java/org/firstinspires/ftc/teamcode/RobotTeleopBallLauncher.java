@@ -50,12 +50,10 @@ public class RobotTeleopBallLauncher extends OpMode{
     @Override
     public void init() {
         // Define and Initialize Motors
-        leftDrive = hardwareMap.get(DcMotor.class, "left_drive");
-        rightDrive = hardwareMap.get(DcMotor.class, "right_drive");
+        leftDrive = hardwareMap.get(DcMotor.class, "launchmotor");
 
 
         leftDrive.setDirection(DcMotor.Direction.REVERSE);
-        rightDrive.setDirection(DcMotor.Direction.FORWARD);
 
 
         // Send telemetry message to signify Ball Launcher is armed
@@ -73,20 +71,17 @@ public class RobotTeleopBallLauncher extends OpMode{
 
         if (gamepad1.x) {
             leftDrive.setPower(1);
-            rightDrive.setPower(1);
             gamepad1.runRumbleEffect(customRumbleEffect);
         } else {
             leftDrive.setPower(0);
-            rightDrive.setPower(0);
             gamepad1.stopRumble();
         }
 
 
 
         // Send telemetry message to signify robot running;
-        telemetry.addLine("Ball Launcher Motors Running");
-        telemetry.addData("left",  "%.2f", leftDrive.getPower());
-        telemetry.addData("right", "%.2f", rightDrive.getPower());
+        telemetry.addLine("Ball Launcher Motor Running");
+        telemetry.addData("Main", "%.2f", rightDrive.getPower());
     }
 
     @Override
