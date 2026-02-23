@@ -31,7 +31,7 @@ public class CompetitionTeleOp extends LinearOpMode {
         intake.init(hardwareMap);
 
         // ===== MAP LAUNCHER =====
-        launchMotor = hardwareMap.get(DcMotor.class, "launchmotor");
+        launchMotor = hardwareMap.get(DcMotor.class, "launchMotor");
         launchMotor.setDirection(DcMotor.Direction.REVERSE);
 
         customRumbleEffect = new Gamepad.RumbleEffect.Builder()
