@@ -35,7 +35,10 @@ public class CompetitionTeleOp extends LinearOpMode {
 
         // ===== MAP LAUNCHER =====
         launchMotor = hardwareMap.get(DcMotor.class, "launchMotor");
+
+        launchMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         launchMotor.setDirection(DcMotor.Direction.REVERSE);
+
 
         customRumbleEffect = new Gamepad.RumbleEffect.Builder()
                 .addStep(0.5, 0.5, 10)

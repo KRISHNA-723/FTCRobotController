@@ -19,6 +19,7 @@ public class IntakeMode {
         Intake = hwMap.get(DcMotor.class, "Intake");
         servoIntake = hwMap.get(Servo.class, "servoIntake");
 
+        Intake.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
     }
 
