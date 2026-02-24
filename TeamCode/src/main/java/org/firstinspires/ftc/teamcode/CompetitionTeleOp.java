@@ -61,16 +61,20 @@ public class CompetitionTeleOp extends LinearOpMode {
             // =========================
             // INTAKE (left bumper hold)
             // =========================
-            if (gamepad2.left_bumper) {
+  
+            while (gamepad2.left_bumper) {
+
                 intake.setMotorSpeed(1.0);
-            } else {
+
+            }
+            else {
                 intake.setMotorSpeed(0);
             }
 
 
             // LAUNCHER (X hold)
 
-            if (gamepad2.x) {
+            if (gamepad2.right_bumper) {
                 launchMotor.setPower(1.0);
                 gamepad2.runRumbleEffect(customRumbleEffect);
             } else {

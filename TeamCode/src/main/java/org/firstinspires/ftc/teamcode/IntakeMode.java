@@ -20,7 +20,6 @@ public class IntakeMode {
         servoIntake = hwMap.get(Servo.class, "servoIntake");
 
         Intake.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-
     }
 
     // Method to set the motor's speed
