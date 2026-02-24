@@ -50,7 +50,7 @@ public class RobotTeleopBallLauncher extends OpMode{
     @Override
     public void init() {
         // Define and Initialize Motors
-        leftDrive = hardwareMap.get(DcMotor.class, "launchmotor");
+        leftDrive = hardwareMap.get(DcMotor.class, "launchMotor");
 
 
         leftDrive.setDirection(DcMotor.Direction.REVERSE);

@@ -38,7 +38,7 @@ public class CompetitionTeleOp extends LinearOpMode {
         launchMotor.setDirection(DcMotor.Direction.REVERSE);
 
         customRumbleEffect = new Gamepad.RumbleEffect.Builder()
-                .addStep(1.0, 1.0, 10)
+                .addStep(0.5, 0.5, 10)
                 .build();
 
         telemetry.addLine("READY");
@@ -58,7 +58,7 @@ public class CompetitionTeleOp extends LinearOpMode {
             // =========================
             // INTAKE (left bumper hold)
             // =========================
-            if (gamepad1.left_bumper) {
+            if (gamepad2.left_bumper) {
                 intake.setMotorSpeed(1.0);
             } else {
                 intake.setMotorSpeed(0);
@@ -67,12 +67,12 @@ public class CompetitionTeleOp extends LinearOpMode {
 
             // LAUNCHER (X hold)
 
-            if (gamepad1.x) {
+            if (gamepad2.x) {
                 launchMotor.setPower(1.0);
-                gamepad1.runRumbleEffect(customRumbleEffect);
+                gamepad2.runRumbleEffect(customRumbleEffect);
             } else {
                 launchMotor.setPower(0);
-                gamepad1.stopRumble();
+                gamepad2.stopRumble();
             }
 
             telemetry.addData("Drive Power", drive);
@@ -85,6 +85,6 @@ public class CompetitionTeleOp extends LinearOpMode {
         rightMotor.setPower(0);
         launchMotor.setPower(0);
         intake.setMotorSpeed(0);
-        gamepad1.stopRumble();
+        gamepad2.stopRumble();
     }
 }
