@@ -7,7 +7,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 // Class used for the functioning of the robot's intake
 public class IntakeMode {
 
-    private DcMotor leftIntake; // Left Motor for intake
+    private DcMotor Intake; // Left Motor for intake
     private Servo servoIntake; // Right Motor for intake
 
 
@@ -16,9 +16,7 @@ public class IntakeMode {
     public void init(HardwareMap hwMap) {
 
         // Configuring the motors for the intake
-        leftIntake = hwMap.get(DcMotor.class, "leftIntake");
-        leftIntake.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER); // Use constant power for the motor
-
+        Intake = hwMap.get(DcMotor.class, "Intake");
         servoIntake = hwMap.get(Servo.class, "servoIntake");
 
 
@@ -28,7 +26,7 @@ public class IntakeMode {
     public void setMotorSpeed(double speed) {
 
         // Set the motors speed to the given speed argument
-        leftIntake.setPower(speed);
+        Intake.setPower(speed);
         servoIntake.setPosition(speed);
     }
 
