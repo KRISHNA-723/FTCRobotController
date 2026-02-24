@@ -4,6 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Gamepad;
+import com.qualcomm.robotcore.hardware.Servo;
 
 @TeleOp(name = "Competition TeleOp", group = "Competition")
 public class CompetitionTeleOp extends LinearOpMode {
@@ -11,6 +12,7 @@ public class CompetitionTeleOp extends LinearOpMode {
     // DRIVE
     private DcMotor leftMotor;
     private DcMotor rightMotor;
+
 
     // INTAKE
     private IntakeMode intake = new IntakeMode();
@@ -25,6 +27,7 @@ public class CompetitionTeleOp extends LinearOpMode {
         // ===== MAP DRIVE =====
         leftMotor  = hardwareMap.get(DcMotor.class, "leftMotor");
         rightMotor = hardwareMap.get(DcMotor.class, "rightMotor");
+
         leftMotor.setDirection(DcMotor.Direction.REVERSE);
 
         // ===== MAP INTAKE =====
