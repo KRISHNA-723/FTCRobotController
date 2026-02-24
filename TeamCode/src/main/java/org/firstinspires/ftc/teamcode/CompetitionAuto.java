@@ -40,10 +40,10 @@ public class CompetitionAuto extends LinearOpMode {
 
         // DRIVE FORWARD TO LEAVE ZONE
 
-        leftMotor.setPower(0.5);
-        rightMotor.setPower(0.5);
+        leftMotor.setPower(0.7);
+        rightMotor.setPower(0.7);
 
-        sleep(1400);
+        sleep(3000);
 
         // STOP
         leftMotor.setPower(0);
